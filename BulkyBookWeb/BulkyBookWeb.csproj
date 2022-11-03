@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\products\366fa80e-c7d6-47e8-b655-61e930ccad78.jpg" />
+    <Content Remove="wwwroot\images\products\3b625cee-2978-4c20-a62e-877908e7e5e6.jpg" />
+    <Content Remove="wwwroot\images\products\7a574d2a-54a0-47e3-b9cf-8560eb8bf86c.png" />
+    <Content Remove="wwwroot\images\products\8c44f198-1339-46b3-85ce-715345927a91.jpg" />
+    <Content Remove="wwwroot\images\products\9778cad8-8873-4c17-a832-19f2e79f2641.png" />
+    <Content Remove="wwwroot\images\products\98fb482c-5e6e-41e5-b51a-28c0517380f8.png" />
+    <Content Remove="wwwroot\images\products\c88a8170-1c4f-4b18-a6ac-8be0f7fbc799.jpg" />
+    <Content Remove="wwwroot\images\products\df84d4d8-684d-4559-b499-f612683f2c38.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BulkyBook.DataAccess\BulkyBook.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\products\" />
+  </ItemGroup>
+
+</Project>
+ 
