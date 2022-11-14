@@ -561,3 +561,5 @@ D:\net centric\DOTNETProjects\Assignments\BulkyBook\BulkyBookWeb\bin\Debug\net6.
 D:\net centric\DOTNETProjects\Assignments\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\net centric\DOTNETProjects\Assignments\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\net centric\DOTNETProjects\Assignments\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\net centric\DOTNETProjects\Assignments\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.dll
+D:\net centric\DOTNETProjects\Assignments\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.pdb
