@@ -94,7 +94,7 @@ public class ProductController : Controller
                 _unitOfWork.Product.Update(obj.Product);
             }
            
-            _unitOfWork.Product.Save();
+            _unitOfWork.Save();
             TempData["success"] = "Product created successfully.";
             return RedirectToAction("Index");
         }
@@ -156,7 +156,7 @@ public class ProductController : Controller
             System.IO.File.Delete(oldImagePath);
         }
         _unitOfWork.Product.Remove(obj);
-        _unitOfWork.Product.Save();
+        _unitOfWork.Save();
         return Json(new { success = true, message = "Product deleted successfully" });
     }
     #endregion

@@ -39,10 +39,10 @@ namespace BulkyBook.DataAccess.Repository
             }
 
         }
-        public void Save()
-        {
-            _db.SaveChanges();
-        }
+        //public void Save()
+        //{
+        //    _db.SaveChanges();
+        //}
 
     }
 

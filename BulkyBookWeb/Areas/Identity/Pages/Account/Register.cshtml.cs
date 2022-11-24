@@ -119,7 +119,6 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
             public int? CompanyId { get; set; }
             [ValidateNever]
             public IEnumerable<SelectListItem> RoleList { get; set; }
-            [ValidateNever]
             public IEnumerable<SelectListItem> CompanyList { get; set; }
 
         }
@@ -129,10 +128,10 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
         {
             if(!_roleManager.RoleExistsAsync(SD.Role_Admin).GetAwaiter().GetResult())
             { 
-                _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.Role_Employee)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Comp)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Indi)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.Role_Employee)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Comp)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Indi)).GetAwaiter().GetResult();
             }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -143,7 +142,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
                     Text = i,
                     Value = i
                 }),
-                CompanyList = _unitOfWork.Company.GetAll().Select(i => new SelectListItem
+                CompanyList=_unitOfWork.Company.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
@@ -161,27 +160,29 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.Name = Input.Name;
                 user.StreetAddress = Input.StreetAddress;
                 user.City = Input.City;
                 user.State = Input.State;
-                user.Name = Input.Name;
-                user.PhoneNumber = Input.PhoneNumber;
                 user.PostalCode = Input.PostalCode;
+                user.PhoneNumber = Input.PhoneNumber;
                 if(Input.Role==SD.Role_User_Comp)
                 {
                     user.CompanyId = Input.CompanyId;
                 }
+
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
-                    if(Input.Role==null)
+                    if(Input.Role == null)
                     {
-                        await _userManager.AddToRoleAsync(user, SD.Role_User_Indi);
+                        await _userManager.AddToRoleAsync(user, SD.Role_User_Indi); 
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user,Input.Role);
+                        await _userManager.AddToRoleAsync(user, Input.Role);
                     }
                     _logger.LogInformation("User created a new account with password.");
 
