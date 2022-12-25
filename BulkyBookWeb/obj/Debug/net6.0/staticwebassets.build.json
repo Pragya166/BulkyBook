@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "u5qZeuxUTjMCZWqxbD1YvnoVC94snhUvpebfHp1AflA=",
+  "Hash": "TjkXHFtVgALyQR8FGAJkwCX2BA5RdZ9w3ojO6MGav8o=",
   "Source": "BulkyBookWeb",
   "BasePath": "_content/BulkyBookWeb",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\leaf.jpg"
+    },
+    {
+      "Identity": "D:\\net centric\\DOTNETProjects\\Assignments\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\4ba2b68b-eabc-475b-b195-e011b88a5d05.jpg",
+      "SourceId": "BulkyBookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\net centric\\DOTNETProjects\\Assignments\\BulkyBook\\BulkyBookWeb\\wwwroot\\",
+      "BasePath": "_content/BulkyBookWeb",
+      "RelativePath": "images/products/4ba2b68b-eabc-475b-b195-e011b88a5d05.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\4ba2b68b-eabc-475b-b195-e011b88a5d05.jpg"
     },
     {
       "Identity": "D:\\net centric\\DOTNETProjects\\Assignments\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\5dc1be0c-80d8-461d-aac4-1152e231319b.jpg",
